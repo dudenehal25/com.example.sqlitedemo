@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity"
+    android:gravity="start"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NAME"
+        android:textSize="24sp"
+        android:layout_marginTop="20dp"/>
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/tvName"
+        android:layout_marginStart="30dp"
+        android:layout_alignBaseline="@+id/tvName"
+        android:hint="enter here"/>
+
+    <TextView
+        android:id="@+id/tvEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvName"
+        android:text="EMAIL"
+        android:textSize="24sp"
+        android:layout_marginTop="20dp"/>
+    <EditText
+        android:id="@+id/etEmailId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/tvName"
+        android:layout_marginStart="30dp"
+        android:layout_alignBaseline="@+id/tvEmail"
+        android:hint="enter here"/>
+
+    <Button
+        android:id="@+id/btnADD"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_below="@+id/tvEmail"
+        android:layout_marginTop="30dp"
+        android:text="ADD RECORD"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@android:color/white"/>
+
+    <TextView
+        android:id="@+id/tvRecords"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnADD"
+        android:text="ALL THE INSERTED RECORD"
+        android:textStyle="bold"
+        android:layout_marginStart="41dp"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvitemList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/tvRecords"
+        android:visibility="gone"/>
+
+
+
+
+</RelativeLayout>
